@@ -11,6 +11,8 @@ public class MainActivity extends Activity {
 
     private WebView mWebView;
 
+    public static final String APP_URL_STRING = "https://notwax.unchained.ninja";
+
     @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +24,7 @@ public class MainActivity extends Activity {
         webSettings.setJavaScriptEnabled(true);
 
         // REMOTE RESOURCE
-        mWebView.loadUrl("https://wms.unchained.tech");
+        mWebView.loadUrl(APP_URL_STRING);
         mWebView.setWebViewClient(new MyWebViewClient());
 
         // LOCAL RESOURCE
