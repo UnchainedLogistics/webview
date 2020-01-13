@@ -4,7 +4,7 @@ android {
     compileSdkVersion 29
 
     defaultConfig {
-        applicationId "com.example.app"
+        applicationId "tech.unchained.wmsapp"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
