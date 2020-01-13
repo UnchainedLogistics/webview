@@ -22,8 +22,8 @@ public class MainActivity extends Activity {
         webSettings.setJavaScriptEnabled(true);
 
         // REMOTE RESOURCE
-        // mWebView.loadUrl("https://example.com");
-        // mWebView.setWebViewClient(new MyWebViewClient());
+        mWebView.loadUrl("https://wms.unchained.tech");
+        mWebView.setWebViewClient(new MyWebViewClient());
 
         // LOCAL RESOURCE
         // mWebView.loadUrl("file:///android_asset/index.html");
