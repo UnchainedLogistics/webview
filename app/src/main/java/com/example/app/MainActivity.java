@@ -11,7 +11,8 @@ public class MainActivity extends Activity {
 
     private WebView mWebView;
 
-    public static final String APP_URL_STRING = "https://notwax.unchained.ninja";
+    public static final String APP_URL_STRING = "https://wms.unchained.tech";
+    //public static final String APP_URL_STRING = "https://notwax.unchained.ninja";
 
     @SuppressLint("SetJavaScriptEnabled")
     @Override
