@@ -5,7 +5,6 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
 
 public class MainActivity extends Activity {
 
@@ -14,19 +13,18 @@ public class MainActivity extends Activity {
     public static final String APP_URL_STRING = "https://wms.unchained.tech";
     //public static final String APP_URL_STRING = "https://notwax.unchained.ninja";
 
-    @SuppressLint("SetJavaScriptEnabled")
     @Override
+    @SuppressLint("SetJavaScriptEnabled")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mWebView = findViewById(R.id.activity_main_webview);
-        mWebView.setWebViewClient(new WebViewClient());
         WebSettings webSettings = mWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
+        mWebView.setWebViewClient(new MyWebViewClient());
 
         // REMOTE RESOURCE
         mWebView.loadUrl(APP_URL_STRING);
-        mWebView.setWebViewClient(new MyWebViewClient());
 
         // LOCAL RESOURCE
         // mWebView.loadUrl("file:///android_asset/index.html");
