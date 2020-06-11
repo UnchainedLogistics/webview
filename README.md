@@ -6,26 +6,25 @@ This is a template project for Android Studio that allows you to create an andro
 
 ### Using a remote source
 
-If you want to create an app that displays the content of a remote website
+If you want to create an app that shows the content of a remote website
 
-1. uncomment lines **25** and **26** in `MainActivity.java` and replace `http://example.com` with your remote source
+1. uncomment line **24** in `MainActivity.java` and replace `https://example.com` with your url
 
 	```java
 	mWebView.loadUrl("https://example.com");
-	mWebView.setWebViewClient(new MyWebViewClient());
 	```
 
-2. open the `MyWebViewClient.java` file and replace `example.com` on line **13** with your custom hostname
+2. open the `MyWebViewClient.java` file and replace `example.com` on line **15** with your hostname
 
 	```java
-	if (Objects.requireNonNull(Uri.parse(url).getHost()).endsWith("example.com")) {
+	hostname = "example.com";
 	```
 
 ### Using a local source
 
 If you want to create a local HTML5 android app
 
-1. uncomment line **29** in `MainActivity.java`
+1. uncomment line **27** in `MainActivity.java`
 
 	```java
 	mWebView.loadUrl("file:///android_asset/index.html");
