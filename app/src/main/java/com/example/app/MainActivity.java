@@ -9,6 +9,7 @@ import android.webkit.WebView;
 public class MainActivity extends Activity {
 
     private WebView mWebView;
+    public static final String APP_URL_STRING = "https://" + BuildConfig.APP_URL;
 
     public static final String APP_URL_STRING = "https://wms.unchained.tech";
     //public static final String APP_URL_STRING = "https://notwax.unchained.ninja";
@@ -22,8 +23,6 @@ public class MainActivity extends Activity {
         WebSettings webSettings = mWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         mWebView.setWebViewClient(new MyWebViewClient());
-
-        // REMOTE RESOURCE
         mWebView.loadUrl(APP_URL_STRING);
 
         // LOCAL RESOURCE

@@ -11,8 +11,7 @@ class MyWebViewClient extends WebViewClient {
     public boolean shouldOverrideUrlLoading(WebView view, String url) {
         String hostname;
 
-        // YOUR HOSTNAME
-        hostname = "wms.unchained.tech";
+        hostname = BuildConfig.APP_URL;
 
         Uri uri = Uri.parse(url);
         if (url.startsWith("file:") || uri.getHost() != null && uri.getHost().endsWith(hostname)) {
