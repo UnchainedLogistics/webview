@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
@@ -24,6 +25,7 @@ public class MainActivity extends Activity {
         WebSettings webSettings = mWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         mWebView.setWebViewClient(new MyWebViewClient());
+        mWebView.setWebChromeClient(new WebChromeClient());
         mWebView.loadUrl(APP_URL_STRING);
 
         mySwipeRefreshLayout.setOnRefreshListener(
